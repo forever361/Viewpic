@@ -7,17 +7,21 @@ import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewGroup.LayoutParams;
 import android.view.Window;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
 private ViewPager viewPager;
 private ArrayList<View> pageview;
+
+private TextView tv_indicator;
 
 
 private ImageView imageView; 
@@ -33,6 +37,7 @@ private ViewGroup group;
         setContentView(R.layout.main);
         
         viewPager = (ViewPager) findViewById(R.id.viewPager);
+		tv_indicator = (TextView) findViewById(R.id.tv_indicator);
         
         //���Ҳ����ļ���LayoutInflater.inflate
         LayoutInflater inflater =getLayoutInflater();
@@ -47,7 +52,7 @@ private ViewGroup group;
         pageview.add(view3);
                
                 
-        group = (ViewGroup)findViewById(R.id.viewGroup); 
+//        group = (ViewGroup)findViewById(R.id.viewGroup);
         
         //�ж�����ͼ���ж��ٸ����
         imageViews = new ImageView[pageview.size()];
@@ -64,7 +69,7 @@ private ViewGroup group;
                 imageViews[i].setBackgroundResource(R.drawable.page_indicator_unfocused);  
             }  
             
-            group.addView(imageViews[i]);  
+//            group.addView(imageViews[i]);
         }
                              
 
@@ -118,19 +123,21 @@ private ViewGroup group;
 		@Override
 		public void onPageScrolled(int arg0, float arg1, int arg2) {
 			// TODO Auto-generated method stub
-			
+			tv_indicator.setText(String.valueOf(arg0+1)+"/"+pageview.size());
 		}
 
 		@Override
 		//����л��ˣ��Ͱѵ�ǰ�ĵ������Ϊѡ�б�������������δѡ�б���
 		public void onPageSelected(int arg0) {
 			// TODO Auto-generated method stub
-			for(int i=0;i<imageViews.length;i++){
-				imageViews[arg0].setBackgroundResource(R.drawable.page_indicator_focused);
-				 if (arg0 != i) {  
-	                    imageViews[i].setBackgroundResource(R.drawable.page_indicator_unfocused);  
-	                }  
-			}
+//			for(int i=0;i<imageViews.length;i++){
+//				imageViews[arg0].setBackgroundResource(R.drawable.page_indicator_focused);
+//				 if (arg0 != i) {
+//	                    imageViews[i].setBackgroundResource(R.drawable.page_indicator_unfocused);
+//	                }
+//			}
+
+
 			
 		}
     	

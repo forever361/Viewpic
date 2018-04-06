@@ -5,20 +5,24 @@
     android:orientation="vertical" >
     <!-- 切换卡 -->
     <android.support.v4.view.ViewPager
-         android:id="@+id/viewPager"  
-         android:layout_width="match_parent"
-         android:layout_height="wrap_content"
-        >  
-    </android.support.v4.view.ViewPager>  
-    
-    <!-- 点点 -->   
-        <LinearLayout  
-        android:id="@+id/viewGroup"  
-        android:layout_width="fill_parent"  
-        android:layout_height="wrap_content"  
-        android:layout_alignParentBottom="true"  
-        android:layout_marginBottom="40dp"  
-        android:gravity="center_horizontal"  
-        android:orientation="horizontal" >         
-    </LinearLayout>  
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="169dp"
+        android:layout_marginTop="50dp">
+    </android.support.v4.view.ViewPager>
+
+    <TextView
+        android:id="@+id/tv_indicator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:textColor="#111111"
+        android:textSize="20sp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        />
+
 </RelativeLayout>
