@@ -11,8 +11,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginBottom="169dp"
-        android:layout_marginTop="50dp">
+        android:layout_marginBottom="200dp"
+        android:layout_marginTop="30dp">
     </android.support.v4.view.ViewPager>
 
     <TextView
@@ -25,5 +25,33 @@
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="80dp"
         />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_indicator"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="15dp"
+        android:layout_marginStart="15dp"
+        android:text="英语" />
+
+    <Button
+        android:id="@+id/button_a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/button"
+        android:layout_alignBottom="@+id/button"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="11dp"
+        android:text="儿歌" />
+
+    <Button
+        android:id="@+id/button_b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/button_a"
+        android:layout_centerHorizontal="true"
+        android:text="中文" />
 
 </RelativeLayout>
